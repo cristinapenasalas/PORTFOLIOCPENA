@@ -70,6 +70,11 @@ export interface ProjectResult {
   paragraph?: string;
 }
 
+export interface ProjectScreenshot {
+  src: string;
+  alt: { es: string; en: string };
+}
+
 export interface Project {
   slug: string;
   type: ProjectType;
@@ -80,6 +85,8 @@ export interface Project {
   problem: { es: string; en: string };
   actions: { es: string[]; en: string[] };
   results: { es: ProjectResult; en: ProjectResult };
+  liveUrl?: string;
+  screenshots?: ProjectScreenshot[];
 }
 
 export const projects: Project[] = [
@@ -160,6 +167,28 @@ export const projects: Project[] = [
           "A more organized, intuitive site that improves the shopping experience — one the client can maintain and update on their own.",
       },
     },
+    liveUrl: 'https://tokepersonal.es/',
+    screenshots: [
+      {
+        src: '/case-studies/toke-personal/home.jpg',
+        alt: { es: 'Página de inicio de Toke Personal', en: 'Toke Personal homepage' },
+      },
+      {
+        src: '/case-studies/toke-personal/catalogo-filtros.jpg',
+        alt: {
+          es: 'Catálogo con filtros por color, talla, composición y género',
+          en: 'Catalog with filters by color, size, composition, and gender',
+        },
+      },
+      {
+        src: '/case-studies/toke-personal/catalogo-productos.jpg',
+        alt: { es: 'Listado de productos personalizables', en: 'Personalizable products listing' },
+      },
+      {
+        src: '/case-studies/toke-personal/checkout.jpg',
+        alt: { es: 'Proceso de compra y checkout', en: 'Checkout and purchase flow' },
+      },
+    ],
   },
   {
     slug: 'email-landewyck',
@@ -280,6 +309,8 @@ export const content = {
       actions: 'Qué hice',
       result: 'El resultado',
       next: 'Siguiente proyecto',
+      visitSite: 'Visitar la web',
+      gallery: 'Capturas del resultado',
     },
     services: {
       eyebrow: 'Servicios',
@@ -433,6 +464,8 @@ export const content = {
       actions: 'What I did',
       result: 'The result',
       next: 'Next project',
+      visitSite: 'Visit site',
+      gallery: 'Screenshots of the result',
     },
     services: {
       eyebrow: 'Services',
