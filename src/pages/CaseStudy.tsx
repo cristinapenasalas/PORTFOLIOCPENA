@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { projects } from '../data/content';
 import ContactCTA from '../components/ContactCTA';
+import PageMeta from '../components/PageMeta';
 import { easeOut } from '../lib/motion';
 import './CaseStudy.css';
 
@@ -21,6 +22,7 @@ export default function CaseStudy() {
 
   return (
     <>
+      <PageMeta title={`${project.title[lang]} — Cristina Peña`} description={project.tagline[lang]} />
       <article className={`case-study case-study--${project.color}`}>
         <section className="case-study__hero container">
           <motion.div

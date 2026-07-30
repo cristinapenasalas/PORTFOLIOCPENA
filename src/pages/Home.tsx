@@ -4,6 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { projects } from '../data/content';
 import ProjectCard from '../components/ProjectCard';
 import ContactCTA from '../components/ContactCTA';
+import PageMeta from '../components/PageMeta';
 import { easeOut } from '../lib/motion';
 import './Home.css';
 
@@ -12,6 +13,7 @@ export default function Home() {
 
   return (
     <>
+      <PageMeta title={t.seo.home.title} description={t.seo.home.description} />
       <section className="hero container">
         <motion.p
           className="hero__eyebrow"

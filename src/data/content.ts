@@ -206,8 +206,36 @@ export const projects: Project[] = [
 
 export const content = {
   es: {
-    meta: {
-      title: 'Cristina Peña — Comunicación digital & desarrollo web',
+    seo: {
+      home: {
+        title: 'Cristina Peña — Comunicación digital & desarrollo web',
+        description:
+          'Ayudo a marcas y negocios a comunicar mejor en digital: redes sociales, email marketing, webs e IA aplicada al marketing.',
+      },
+      about: {
+        title: 'Sobre mí — Cristina Peña',
+        description:
+          'Más de 5 años de experiencia en marketing digital, diseño y desarrollo web, y gestión de redes sociales, trabajando con marcas locales y multinacionales.',
+      },
+      work: {
+        title: 'Proyectos — Cristina Peña',
+        description:
+          'Estudios de caso de redes sociales, diseño web y email marketing: el problema, qué hice, y el resultado, con métricas reales.',
+      },
+      services: {
+        title: 'Servicios — Cristina Peña',
+        description:
+          'Gestión de redes sociales, diseño y desarrollo web, email marketing e inteligencia artificial aplicada al marketing, adaptado a lo que tu marca necesite.',
+      },
+      contact: {
+        title: 'Contacto — Cristina Peña',
+        description:
+          'Escríbeme a cristina.pena3108@gmail.com, llama al +34 675 666 728 o rellena el formulario para hablar de tu proyecto.',
+      },
+      notFound: {
+        title: 'Página no encontrada — Cristina Peña',
+        description: 'La página que buscas no existe o se ha movido.',
+      },
     },
     nav: {
       home: 'Inicio',
@@ -322,8 +350,36 @@ export const content = {
     },
   },
   en: {
-    meta: {
-      title: 'Cristina Peña — Digital communication & web development',
+    seo: {
+      home: {
+        title: 'Cristina Peña — Digital communication & web development',
+        description:
+          'I help brands and businesses communicate better online: social media, email marketing, websites, and AI applied to marketing.',
+      },
+      about: {
+        title: 'About — Cristina Peña',
+        description:
+          "5+ years of experience in digital marketing, design and web development, and social media management, working with local brands and multinationals.",
+      },
+      work: {
+        title: 'Work — Cristina Peña',
+        description:
+          'Case studies in social media, web design, and email marketing: the problem, what I did, and the result, with real metrics.',
+      },
+      services: {
+        title: 'Services — Cristina Peña',
+        description:
+          'Social media management, web design & development, email marketing, and AI applied to marketing, tailored to what your brand needs.',
+      },
+      contact: {
+        title: 'Contact — Cristina Peña',
+        description:
+          'Email cristina.pena3108@gmail.com, call +34 675 666 728, or fill out the form to talk about your project.',
+      },
+      notFound: {
+        title: 'Page not found — Cristina Peña',
+        description: "The page you're looking for doesn't exist or has moved.",
+      },
     },
     nav: {
       home: 'Home',

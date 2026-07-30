@@ -5,6 +5,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { projects, type ProjectType } from '../data/content';
 import ProjectCard from '../components/ProjectCard';
 import ContactCTA from '../components/ContactCTA';
+import PageMeta from '../components/PageMeta';
 import { easeOut } from '../lib/motion';
 import './Work.css';
 
@@ -39,6 +40,7 @@ export default function Work() {
 
   return (
     <>
+      <PageMeta title={t.seo.work.title} description={t.seo.work.description} />
       <section className="work-hero container">
         <motion.p
           className="work-hero__eyebrow"

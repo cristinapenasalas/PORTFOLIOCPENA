@@ -24,7 +24,6 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     window.localStorage.setItem(STORAGE_KEY, lang);
     document.documentElement.setAttribute('lang', lang);
-    document.title = content[lang].meta.title;
   }, [lang]);
 
   const toggleLang = () => setLang((prev) => (prev === 'es' ? 'en' : 'es'));

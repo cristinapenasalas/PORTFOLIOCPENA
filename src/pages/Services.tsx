@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { services, projects } from '../data/content';
 import ContactCTA from '../components/ContactCTA';
+import PageMeta from '../components/PageMeta';
 import { easeOut } from '../lib/motion';
 import './Services.css';
 
@@ -11,6 +12,7 @@ export default function Services() {
 
   return (
     <>
+      <PageMeta title={t.seo.services.title} description={t.seo.services.description} />
       <section className="services-hero container">
         <motion.p
           className="services-hero__eyebrow"

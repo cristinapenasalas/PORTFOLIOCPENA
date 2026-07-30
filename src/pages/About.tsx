@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import ContactCTA from '../components/ContactCTA';
+import PageMeta from '../components/PageMeta';
 import { easeOut } from '../lib/motion';
 import './About.css';
 
@@ -9,6 +10,7 @@ export default function About() {
 
   return (
     <>
+      <PageMeta title={t.seo.about.title} description={t.seo.about.description} />
       <section className="about-hero container">
         <motion.p
           className="about-hero__eyebrow"
