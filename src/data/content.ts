@@ -2,6 +2,69 @@ export type Lang = 'es' | 'en';
 
 export type ProjectType = 'social' | 'web' | 'email';
 
+export interface Service {
+  type: ProjectType | 'ai';
+  color: 'pink' | 'blue' | 'amber';
+  title: { es: string; en: string };
+  description: { es: string; en: string };
+  audience: { es: string; en: string };
+}
+
+export const services: Service[] = [
+  {
+    type: 'social',
+    color: 'pink',
+    title: { es: 'Gestión de redes sociales', en: 'Social media management' },
+    description: {
+      es: 'Estrategia, creación de contenido (reels, TikTok, carruseles), edición de foto y vídeo, community management.',
+      en: 'Strategy, content creation (reels, TikTok, carousels), photo and video editing, community management.',
+    },
+    audience: {
+      es: 'Para marcas que quieren una presencia constante y con personalidad en redes.',
+      en: 'For brands that want a consistent, personality-driven presence on social media.',
+    },
+  },
+  {
+    type: 'web',
+    color: 'blue',
+    title: { es: 'Diseño y desarrollo web', en: 'Web design & development' },
+    description: {
+      es: 'Creación de páginas web adaptadas a cada marca.',
+      en: 'Websites designed and built around each brand.',
+    },
+    audience: {
+      es: 'Para negocios o personas que necesitan una web profesional, a medida y sin complicaciones.',
+      en: 'For businesses or individuals who need a professional, custom website without the hassle.',
+    },
+  },
+  {
+    type: 'email',
+    color: 'amber',
+    title: { es: 'Email marketing', en: 'Email marketing' },
+    description: {
+      es: 'Campañas y automatizaciones con Mailchimp y HubSpot.',
+      en: 'Campaigns and automations with Mailchimp and HubSpot.',
+    },
+    audience: {
+      es: 'Comunicación directa que fideliza y convierte, pensada para negocios que quieren mantener el contacto con sus clientes de forma automática y efectiva.',
+      en: 'Direct communication that builds loyalty and converts — for businesses that want to stay in touch with their customers automatically and effectively.',
+    },
+  },
+  {
+    type: 'ai',
+    color: 'pink',
+    title: { es: 'Inteligencia artificial aplicada al marketing', en: 'AI applied to marketing' },
+    description: {
+      es: 'Generación de imágenes y vídeos, agentes de IA para optimizar procesos.',
+      en: 'Image and video generation, AI agents that streamline processes.',
+    },
+    audience: {
+      es: 'Contenido y procesos más rápidos, sin perder calidad.',
+      en: 'Faster content and processes, without losing quality.',
+    },
+  },
+];
+
 export interface ProjectResult {
   metrics?: { value: string; label: string }[];
   paragraph?: string;
@@ -181,6 +244,12 @@ export const content = {
       result: 'El resultado',
       next: 'Siguiente proyecto',
     },
+    services: {
+      eyebrow: 'Servicios',
+      heading: 'Cómo puedo ayudarte.',
+      support: 'Cuatro formas de trabajar juntas, según lo que tu marca necesite ahora mismo.',
+      viewWork: 'Ver proyectos',
+    },
     about: {
       eyebrow: 'Sobre mí',
       heading: 'De la estrategia al código.',
@@ -262,6 +331,12 @@ export const content = {
       actions: 'What I did',
       result: 'The result',
       next: 'Next project',
+    },
+    services: {
+      eyebrow: 'Services',
+      heading: 'How I can help.',
+      support: 'Four ways to work together, depending on what your brand needs right now.',
+      viewWork: 'View work',
     },
     about: {
       eyebrow: 'About',

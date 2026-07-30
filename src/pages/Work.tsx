@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { projects, type ProjectType } from '../data/content';
@@ -9,15 +10,24 @@ import './Work.css';
 
 type FilterValue = ProjectType | 'all';
 
+const projectTypes: ProjectType[] = ['social', 'web', 'email'];
+
+function isProjectType(value: string | null): value is ProjectType {
+  return projectTypes.includes(value as ProjectType);
+}
+
 export default function Work() {
   const { t, lang } = useLanguage();
-  const [activeFilter, setActiveFilter] = useState<FilterValue>('all');
+  const [searchParams] = useSearchParams();
+  const requestedType = searchParams.get('tipo');
+  const [activeFilter, setActiveFilter] = useState<FilterValue>(
+    isProjectType(requestedType) ? requestedType : 'all',
+  );
 
   const filters = useMemo(() => {
-    const types: ProjectType[] = ['social', 'web', 'email'];
     return [
       { value: 'all' as FilterValue, label: t.work.filterAll },
-      ...types.map((type) => ({
+      ...projectTypes.map((type) => ({
         value: type as FilterValue,
         label: projects.find((p) => p.type === type)!.category[lang],
       })),
