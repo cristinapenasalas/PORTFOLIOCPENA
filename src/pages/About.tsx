@@ -34,16 +34,18 @@ export default function About() {
       <section className="about-bio container">
         <motion.div
           className="about-bio__mark"
-          aria-hidden="true"
           initial={{ opacity: 0, scale: 0.92 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.8, ease: easeOut }}
         >
-          <span className="about-bio__mark-glyph about-bio__mark-glyph--pink" />
-          <span className="about-bio__mark-glyph about-bio__mark-glyph--blue" />
-          <span className="about-bio__mark-glyph about-bio__mark-glyph--amber" />
-          <span className="about-bio__mark-initials">CP</span>
+          <span className="about-bio__mark-glyph about-bio__mark-glyph--pink" aria-hidden="true" />
+          <span className="about-bio__mark-glyph about-bio__mark-glyph--blue" aria-hidden="true" />
+          <img
+            src="/about/cristina-pena.jpeg"
+            alt={t.about.photoAlt}
+            className="about-bio__photo"
+          />
         </motion.div>
 
         <div className="about-bio__text">

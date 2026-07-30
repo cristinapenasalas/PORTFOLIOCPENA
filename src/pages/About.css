@@ -28,60 +28,43 @@
 .about-bio__mark {
   position: relative;
   aspect-ratio: 4 / 5;
-  border-radius: 24px;
-  background: var(--bg-raised);
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .about-bio__mark-glyph {
   position: absolute;
+  z-index: 0;
   border-radius: 50%;
-  filter: blur(2px);
+  filter: blur(20px);
 }
 
 .about-bio__mark-glyph--pink {
-  width: 70%;
+  width: 55%;
   aspect-ratio: 1;
   background: var(--pink);
-  opacity: 0.85;
-  top: -12%;
-  left: -18%;
+  opacity: 0.8;
+  top: -10%;
+  left: -14%;
 }
 
 .about-bio__mark-glyph--blue {
-  width: 60%;
+  width: 48%;
   aspect-ratio: 1;
   background: var(--blue);
-  opacity: 0.8;
-  bottom: -18%;
-  right: -14%;
+  opacity: 0.75;
+  bottom: -12%;
+  right: -10%;
 }
 
-.about-bio__mark-glyph--amber {
-  width: 38%;
-  aspect-ratio: 1;
-  background: var(--amber);
-  opacity: 0.9;
-  bottom: 8%;
-  left: 8%;
-}
-
-.about-bio__mark-initials {
+.about-bio__photo {
   position: relative;
   z-index: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.35em 0.55em;
-  border-radius: 16px;
-  font-family: var(--font-display);
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  font-weight: 700;
-  color: #faf8f5;
-  background: var(--charcoal);
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  object-fit: cover;
+  object-position: top center;
 }
 
 .about-bio__text {
