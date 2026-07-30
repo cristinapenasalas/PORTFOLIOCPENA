@@ -314,6 +314,20 @@ export const projects: Project[] = [
           en: 'Club Landewyck July newsletter, bottom half',
         },
       },
+      {
+        src: '/case-studies/email-landewyck/newsletter-mais-adiante-1.png',
+        alt: {
+          es: 'Newsletter "Mais Adiante com Landewyck", mitad superior',
+          en: '"Mais Adiante com Landewyck" loyalty newsletter, top half',
+        },
+      },
+      {
+        src: '/case-studies/email-landewyck/newsletter-mais-adiante-2.png',
+        alt: {
+          es: 'Newsletter "Mais Adiante com Landewyck", mitad inferior',
+          en: '"Mais Adiante com Landewyck" loyalty newsletter, bottom half',
+        },
+      },
     ],
   },
 ];
