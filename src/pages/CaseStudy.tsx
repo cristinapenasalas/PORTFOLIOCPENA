@@ -4,6 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { projects } from '../data/content';
 import ContactCTA from '../components/ContactCTA';
 import PageMeta from '../components/PageMeta';
+import GrowthChart from '../components/GrowthChart';
 import { easeOut } from '../lib/motion';
 import './CaseStudy.css';
 
@@ -62,27 +63,28 @@ export default function CaseStudy() {
             {project.tagline[lang]}
           </motion.p>
 
-          {project.liveUrl && (
-            <motion.a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="case-study__visit"
+          {project.links && project.links.length > 0 && (
+            <motion.div
+              className="case-study__links"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.24, ease: easeOut }}
             >
-              {t.caseStudy.visitSite}
-              <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true">
-                <path
-                  d="M4 14L14 4M14 4H6M14 4V12"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </motion.a>
+              {project.links.map((link) => (
+                <a key={link.url} href={link.url} target="_blank" rel="noreferrer" className="case-study__visit">
+                  {link.label[lang]}
+                  <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                    <path
+                      d="M4 14L14 4M14 4H6M14 4V12"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </a>
+              ))}
+            </motion.div>
           )}
         </section>
 
@@ -204,6 +206,20 @@ export default function CaseStudy() {
             >
               {result.paragraph}
             </motion.p>
+          )}
+
+          {project.growth && (
+            <motion.div
+              className="case-study__growth"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.15, ease: easeOut }}
+            >
+              <h3 className="case-study__growth-heading">{project.growth.heading[lang]}</h3>
+              <p className="case-study__growth-caption">{project.growth.caption[lang]}</p>
+              <GrowthChart points={project.growth.points} lang={lang} />
+            </motion.div>
           )}
         </section>
 

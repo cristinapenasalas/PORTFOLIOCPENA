@@ -75,6 +75,22 @@ export interface ProjectScreenshot {
   alt: { es: string; en: string };
 }
 
+export interface ProjectLink {
+  label: { es: string; en: string };
+  url: string;
+}
+
+export interface GrowthPoint {
+  month: string;
+  value: number;
+}
+
+export interface ProjectGrowth {
+  heading: { es: string; en: string };
+  caption: { es: string; en: string };
+  points: GrowthPoint[];
+}
+
 export interface Project {
   slug: string;
   type: ProjectType;
@@ -85,8 +101,9 @@ export interface Project {
   problem: { es: string; en: string };
   actions: { es: string[]; en: string[] };
   results: { es: ProjectResult; en: ProjectResult };
-  liveUrl?: string;
+  links?: ProjectLink[];
   screenshots?: ProjectScreenshot[];
+  growth?: ProjectGrowth;
 }
 
 export const projects: Project[] = [
@@ -132,6 +149,48 @@ export const projects: Project[] = [
         ],
       },
     },
+    links: [
+      {
+        label: { es: 'Instagram', en: 'Instagram' },
+        url: 'https://www.instagram.com/landewyck_espana/',
+      },
+      {
+        label: { es: 'LinkedIn', en: 'LinkedIn' },
+        url: 'https://www.linkedin.com/company/landewyck-espana/',
+      },
+    ],
+    screenshots: [
+      {
+        src: '/case-studies/redes-landewyck/instagram.jpg',
+        alt: { es: 'Perfil de Instagram de Landewyck España', en: "Landewyck España's Instagram profile" },
+      },
+      {
+        src: '/case-studies/redes-landewyck/linkedin.jpg',
+        alt: { es: 'Página de LinkedIn de Landewyck Tabacos España', en: "Landewyck Tabacos España's LinkedIn page" },
+      },
+    ],
+    growth: {
+      heading: { es: 'Crecimiento en Instagram', en: 'Instagram growth' },
+      caption: {
+        es: 'Seguidores nuevos ganados, 100% orgánico (jul 2025 – jul 2026).',
+        en: 'New followers gained, 100% organic (Jul 2025 – Jul 2026).',
+      },
+      points: [
+        { month: '2025-07', value: 25 },
+        { month: '2025-08', value: 325 },
+        { month: '2025-09', value: 376 },
+        { month: '2025-10', value: 395 },
+        { month: '2025-11', value: 408 },
+        { month: '2025-12', value: 417 },
+        { month: '2026-01', value: 449 },
+        { month: '2026-02', value: 716 },
+        { month: '2026-03', value: 753 },
+        { month: '2026-04', value: 1095 },
+        { month: '2026-05', value: 1355 },
+        { month: '2026-06', value: 1518 },
+        { month: '2026-07', value: 1608 },
+      ],
+    },
   },
   {
     slug: 'web-toke-personal',
@@ -167,7 +226,12 @@ export const projects: Project[] = [
           "A more organized, intuitive site that improves the shopping experience — one the client can maintain and update on their own.",
       },
     },
-    liveUrl: 'https://tokepersonal.es/',
+    links: [
+      {
+        label: { es: 'Visitar la web', en: 'Visit site' },
+        url: 'https://tokepersonal.es/',
+      },
+    ],
     screenshots: [
       {
         src: '/case-studies/toke-personal/home.jpg',
@@ -309,7 +373,6 @@ export const content = {
       actions: 'Qué hice',
       result: 'El resultado',
       next: 'Siguiente proyecto',
-      visitSite: 'Visitar la web',
       gallery: 'Capturas del resultado',
     },
     services: {
@@ -464,7 +527,6 @@ export const content = {
       actions: 'What I did',
       result: 'The result',
       next: 'Next project',
-      visitSite: 'Visit site',
       gallery: 'Screenshots of the result',
     },
     services: {
