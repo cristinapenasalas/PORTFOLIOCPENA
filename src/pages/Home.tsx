@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { projects } from '../data/content';
 import ProjectCard from '../components/ProjectCard';
+import Testimonials from '../components/Testimonials';
 import ContactCTA from '../components/ContactCTA';
 import PageMeta from '../components/PageMeta';
 import { easeOut } from '../lib/motion';
@@ -89,6 +90,8 @@ export default function Home() {
           </Link>
         </motion.div>
       </section>
+
+      <Testimonials />
 
       <ContactCTA />
     </>

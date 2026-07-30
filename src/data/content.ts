@@ -332,6 +332,55 @@ export const projects: Project[] = [
   },
 ];
 
+export interface Testimonial {
+  name: string;
+  role: { es: string; en: string };
+  quote: { es: string; en: string };
+}
+
+export const testimonials: Testimonial[] = [
+  {
+    name: 'María G.',
+    role: { es: 'Tienda de ropa online', en: 'Online clothing store' },
+    quote: {
+      es: 'Trabajar contigo fue una de las mejores decisiones para mi negocio. Renovaste nuestra presencia en redes sociales y en pocas semanas empezamos a recibir más consultas y ventas. Siempre estuviste pendiente de cada detalle y de proponer nuevas ideas. ¡Totalmente recomendado!',
+      en: "Working with you was one of the best decisions for my business. You revamped our social media presence, and within a few weeks we started getting more inquiries and sales. You were always on top of every detail and full of new ideas. Highly recommended!",
+    },
+  },
+  {
+    name: 'Carlos R.',
+    role: { es: 'Empresa de servicios', en: 'Service company' },
+    quote: {
+      es: 'Necesitábamos una página web profesional que transmitiera confianza, y el resultado superó nuestras expectativas. El diseño es moderno, rápido y fácil de navegar. Además, la comunicación durante todo el proyecto fue excelente.',
+      en: 'We needed a professional website that conveyed trust, and the result exceeded our expectations. The design is modern, fast, and easy to navigate. Communication throughout the project was excellent too.',
+    },
+  },
+  {
+    name: 'Andrea P.',
+    role: { es: 'Emprendedora', en: 'Entrepreneur' },
+    quote: {
+      es: 'Gracias a la estrategia de marketing digital que desarrollaste, aumentamos considerablemente el alcance de nuestras publicaciones y conseguimos nuevos clientes. Se nota el conocimiento y la dedicación en cada paso del proceso.',
+      en: "Thanks to the digital marketing strategy you developed, we significantly increased the reach of our posts and gained new clients. You can tell there's real knowledge and dedication behind every step of the process.",
+    },
+  },
+  {
+    name: 'Luis M.',
+    role: { es: 'Restaurante', en: 'Restaurant' },
+    quote: {
+      es: 'Nuestra presencia en redes sociales cambió por completo. Las publicaciones tienen una imagen profesional y ahora interactuamos mucho más con nuestros clientes. Hemos recibido comentarios muy positivos desde que empezamos a trabajar juntos.',
+      en: "Our social media presence changed completely. Posts now have a professional look, and we interact with our customers much more. We've received very positive feedback since we started working together.",
+    },
+  },
+  {
+    name: 'Sofía T.',
+    role: { es: 'Centro de bienestar', en: 'Wellness center' },
+    quote: {
+      es: 'Buscábamos alguien que entendiera nuestra marca y nos ayudara a destacar en internet. El diseño de la web y la gestión de nuestras campañas digitales fueron impecables. Muy profesional, creativo y siempre dispuesto a aportar soluciones.',
+      en: 'We were looking for someone who understood our brand and could help us stand out online. The website design and the management of our digital campaigns were flawless. Very professional, creative, and always ready to offer solutions.',
+    },
+  },
+];
+
 export const content = {
   es: {
     seo: {
@@ -392,6 +441,10 @@ export const content = {
       heading: 'Proyectos destacados',
       viewCase: 'Ver caso',
       viewAll: 'Ver todos los proyectos',
+    },
+    testimonials: {
+      eyebrow: 'Reseñas',
+      heading: 'Lo que dicen mis clientes.',
     },
     work: {
       eyebrow: 'Proyectos',
@@ -547,6 +600,10 @@ export const content = {
       heading: 'Featured work',
       viewCase: 'View case',
       viewAll: 'View all work',
+    },
+    testimonials: {
+      eyebrow: 'Reviews',
+      heading: 'What my clients say.',
     },
     work: {
       eyebrow: 'Work',
