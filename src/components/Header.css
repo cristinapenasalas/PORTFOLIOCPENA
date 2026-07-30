@@ -1,0 +1,206 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-block: 1.15rem;
+}
+
+.site-header__mark {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.site-header__nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 2.1rem);
+}
+
+.site-header__link {
+  position: relative;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  font-weight: 500;
+  padding-block: 0.25rem;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.site-header__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -2px;
+  height: 1px;
+  background: var(--pink);
+  transition: right var(--duration-fast) var(--ease-out);
+}
+
+.site-header__link:hover {
+  color: var(--text);
+}
+
+.site-header__link:hover::after {
+  right: 0;
+}
+
+.site-header__link.is-active {
+  color: var(--text);
+}
+
+.site-header__link.is-active::after {
+  right: 0;
+}
+
+.site-header__controls {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.site-header__lang {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  padding: 0.35rem 0.1rem;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.site-header__lang:hover {
+  color: var(--pink);
+}
+
+.site-header__theme {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+}
+
+.site-header__theme-track {
+  width: 40px;
+  height: 22px;
+  border-radius: 999px;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  transition: background var(--duration-fast) var(--ease-out);
+}
+
+.site-header__theme-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--pink);
+  transform: translateX(0);
+  transition: transform var(--duration-fast) var(--ease-out), background var(--duration-fast) var(--ease-out);
+}
+
+:root[data-theme='dark'] .site-header__theme-thumb {
+  transform: translateX(18px);
+  background: var(--amber);
+}
+
+.site-header__right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.site-header__burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.site-header__burger span {
+  display: block;
+  height: 1.5px;
+  background: var(--text);
+  transition: transform var(--duration-fast) var(--ease-out), opacity var(--duration-fast) var(--ease-out);
+}
+
+.site-header__burger.is-open span:first-child {
+  transform: translateY(3.25px) rotate(45deg);
+}
+
+.site-header__burger.is-open span:last-child {
+  transform: translateY(-3.25px) rotate(-45deg);
+}
+
+.site-header__mobile {
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--duration-med) var(--ease-out);
+  border-top: 1px solid transparent;
+}
+
+.site-header__mobile.is-open {
+  max-height: 320px;
+  border-top-color: var(--border);
+}
+
+.site-header__mobile-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem var(--gutter) 1.5rem;
+}
+
+.site-header__mobile-link {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header__mobile-link.is-active,
+.site-header__mobile-link:hover {
+  color: var(--pink);
+}
+
+@media (max-width: 760px) {
+  .site-header__nav {
+    display: none;
+  }
+
+  .site-header__burger {
+    display: flex;
+  }
+
+  .site-header__mobile {
+    display: block;
+  }
+}

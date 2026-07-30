@@ -1,0 +1,133 @@
+:root {
+  --font-display: 'Bricolage Grotesque', 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  --pink: #d4537e;
+  --blue: #378add;
+  --amber: #fac775;
+  --charcoal: #2c2c2a;
+
+  --bg: #faf8f5;
+  --bg-raised: #f2efe9;
+  --text: #2c2c2a;
+  --text-muted: rgba(44, 44, 42, 0.64);
+  --border: rgba(44, 44, 42, 0.14);
+  --accent: var(--pink);
+  --accent-contrast: #faf8f5;
+
+  --container: 1320px;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 0.28s;
+  --duration-med: 0.6s;
+
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --bg: #201f1d;
+  --bg-raised: #2c2c2a;
+  --text: #f4f1ea;
+  --text-muted: rgba(244, 241, 234, 0.66);
+  --border: rgba(244, 241, 234, 0.16);
+  --accent: var(--pink);
+  --accent-contrast: #201f1d;
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color var(--duration-med) var(--ease-out), color var(--duration-med) var(--ease-out);
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+}
+
+p {
+  margin: 0;
+}
+
+::selection {
+  background: var(--pink);
+  color: #faf8f5;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.text-link {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
+  transition: color var(--duration-fast) var(--ease-out), border-color var(--duration-fast) var(--ease-out);
+}
+
+.text-link:hover {
+  color: var(--pink);
+  border-color: var(--pink);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
