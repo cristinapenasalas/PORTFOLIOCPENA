@@ -88,10 +88,6 @@
   margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
 }
 
-.featured__list {
-  border-bottom: 1px solid var(--border);
-}
-
 .featured__all {
   display: flex;
   justify-content: flex-end;

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
-import { featuredProjects } from '../data/content';
+import { projects } from '../data/content';
 import ProjectCard from '../components/ProjectCard';
 import ContactCTA from '../components/ContactCTA';
 import { easeOut } from '../lib/motion';
@@ -63,8 +63,8 @@ export default function Home() {
           {t.featured.heading}
         </motion.h2>
 
-        <div className="featured__list">
-          {featuredProjects.map((project, i) => (
+        <div className="project-list">
+          {projects.map((project, i) => (
             <ProjectCard
               key={project.slug}
               project={project}

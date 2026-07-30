@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import type { FeaturedProject, Lang } from '../data/content';
+import type { Project, Lang } from '../data/content';
 import { easeOut } from '../lib/motion';
 import './ProjectCard.css';
 
 interface ProjectCardProps {
-  project: FeaturedProject;
+  project: Project;
   lang: Lang;
   index: number;
   viewCaseLabel: string;

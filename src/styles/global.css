@@ -94,6 +94,10 @@ p {
   padding-inline: var(--gutter);
 }
 
+.project-list {
+  border-bottom: 1px solid var(--border);
+}
+
 .text-link {
   text-decoration: none;
   color: var(--text);

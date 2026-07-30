@@ -2,18 +2,10 @@ import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
+import Work from './pages/Work';
+import CaseStudy from './pages/CaseStudy';
 import Placeholder from './pages/Placeholder';
 import { useLanguage } from './context/LanguageContext';
-
-function WorkPage() {
-  const { lang } = useLanguage();
-  return <Placeholder lang={lang} title={{ es: 'Proyectos', en: 'Work' }} />;
-}
-
-function CaseStudyPage() {
-  const { lang } = useLanguage();
-  return <Placeholder lang={lang} title={{ es: 'Estudio de caso', en: 'Case study' }} />;
-}
 
 function ServicesPage() {
   const { lang } = useLanguage();
@@ -31,8 +23,8 @@ function App() {
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/sobre-mi" element={<About />} />
-        <Route path="/proyectos" element={<WorkPage />} />
-        <Route path="/proyectos/:slug" element={<CaseStudyPage />} />
+        <Route path="/proyectos" element={<Work />} />
+        <Route path="/proyectos/:slug" element={<CaseStudy />} />
         <Route path="/servicios" element={<ServicesPage />} />
         <Route path="/contacto" element={<ContactPage />} />
       </Route>

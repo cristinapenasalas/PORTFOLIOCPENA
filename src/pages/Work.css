@@ -1,0 +1,61 @@
+.work-hero {
+  padding-block: clamp(3rem, 9vw, 5.5rem) clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.work-hero__eyebrow {
+  color: var(--pink);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.25rem;
+}
+
+.work-hero__heading {
+  font-size: clamp(2.6rem, 7vw, 5.6rem);
+  font-weight: 600;
+  max-width: 16ch;
+}
+
+.work-hero__support {
+  margin-top: clamp(1.25rem, 3vw, 1.75rem);
+  max-width: 50ch;
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.work-list {
+  padding-block: clamp(1rem, 4vw, 2rem) clamp(3rem, 8vw, 6rem);
+}
+
+.work-list__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.work-list__filter {
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--text-muted);
+  border-radius: 999px;
+  padding: 0.55rem 1.15rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color var(--duration-fast) var(--ease-out), border-color var(--duration-fast) var(--ease-out),
+    background var(--duration-fast) var(--ease-out);
+}
+
+.work-list__filter:hover {
+  color: var(--text);
+  border-color: var(--text-muted);
+}
+
+.work-list__filter.is-active {
+  background: var(--pink);
+  border-color: var(--pink);
+  color: #faf8f5;
+}
