@@ -1,13 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
+import About from './pages/About';
 import Placeholder from './pages/Placeholder';
 import { useLanguage } from './context/LanguageContext';
-
-function AboutPage() {
-  const { lang } = useLanguage();
-  return <Placeholder lang={lang} title={{ es: 'Sobre mí', en: 'About' }} />;
-}
 
 function WorkPage() {
   const { lang } = useLanguage();
@@ -34,7 +30,7 @@ function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/sobre-mi" element={<AboutPage />} />
+        <Route path="/sobre-mi" element={<About />} />
         <Route path="/proyectos" element={<WorkPage />} />
         <Route path="/proyectos/:slug" element={<CaseStudyPage />} />
         <Route path="/servicios" element={<ServicesPage />} />

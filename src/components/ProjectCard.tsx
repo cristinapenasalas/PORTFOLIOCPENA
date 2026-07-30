@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import type { FeaturedProject } from '../data/content';
-import type { Lang } from '../data/content';
+import type { FeaturedProject, Lang } from '../data/content';
+import { easeOut } from '../lib/motion';
 import './ProjectCard.css';
 
 interface ProjectCardProps {
@@ -17,7 +17,7 @@ export default function ProjectCard({ project, lang, index, viewCaseLabel }: Pro
       initial={{ opacity: 0, y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.7, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 0.7, delay: index * 0.08, ease: easeOut }}
     >
       <Link to={`/proyectos/${project.slug}`} className={`project-card project-card--${project.color}`}>
         <div className="project-card__visual" aria-hidden="true">

@@ -1,0 +1,45 @@
+.cta {
+  padding-block: clamp(5rem, 14vw, 9rem);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta__heading {
+  font-size: clamp(2.2rem, 6vw, 4.4rem);
+  font-weight: 600;
+  max-width: 16ch;
+}
+
+.cta__support {
+  margin-top: 1.25rem;
+  max-width: 40ch;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.cta__button {
+  margin-top: clamp(2rem, 5vw, 3rem);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.1rem 2.4rem;
+  border-radius: 999px;
+  background: var(--pink);
+  color: #faf8f5;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: transform var(--duration-fast) var(--ease-out), background var(--duration-fast) var(--ease-out);
+}
+
+.cta__button:hover {
+  background: var(--charcoal);
+  transform: translateY(-3px);
+}
+
+:root[data-theme='dark'] .cta__button:hover {
+  background: var(--amber);
+  color: var(--charcoal);
+}
