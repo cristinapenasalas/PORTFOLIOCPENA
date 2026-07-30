@@ -44,11 +44,11 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="site-header__inner container">
-        <NavLink to="/" className="site-header__mark" aria-label="Cristina Peña — inicio">
+        <NavLink to="/" className="site-header__mark" aria-label={t.a11y.homeLink}>
           Cristina Peña
         </NavLink>
 
-        <nav className="site-header__nav" aria-label="Principal">
+        <nav className="site-header__nav" aria-label={t.a11y.mainNav}>
           {navItems.map((item) => (
             <NavLink
               key={item.to}
@@ -68,7 +68,7 @@ export default function Header() {
             type="button"
             className={menuOpen ? 'site-header__burger is-open' : 'site-header__burger'}
             onClick={() => setMenuOpen((v) => !v)}
-            aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
+            aria-label={menuOpen ? t.a11y.closeMenu : t.a11y.openMenu}
             aria-expanded={menuOpen}
           >
             <span />
@@ -77,8 +77,13 @@ export default function Header() {
         </div>
       </div>
 
-      <div className={menuOpen ? 'site-header__mobile is-open' : 'site-header__mobile'}>
-        <nav className="site-header__mobile-nav" aria-label="Móvil">
+      <div
+        className={menuOpen ? 'site-header__mobile is-open' : 'site-header__mobile'}
+        // Collapsed via max-height/overflow (not display:none) so it can transition,
+        // so `inert` keeps its links out of tab order and the a11y tree while closed.
+        inert={!menuOpen}
+      >
+        <nav className="site-header__mobile-nav" aria-label={t.a11y.mainNav}>
           {navItems.map((item) => (
             <NavLink
               key={item.to}

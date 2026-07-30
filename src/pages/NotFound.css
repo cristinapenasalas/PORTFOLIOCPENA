@@ -9,7 +9,7 @@
 }
 
 .not-found__eyebrow {
-  color: var(--pink);
+  color: var(--pink-ink);
   font-weight: 600;
   font-size: 0.9rem;
   text-transform: uppercase;

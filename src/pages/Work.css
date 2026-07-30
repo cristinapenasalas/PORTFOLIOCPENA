@@ -3,7 +3,7 @@
 }
 
 .work-hero__eyebrow {
-  color: var(--pink);
+  color: var(--pink-ink);
   font-weight: 600;
   font-size: 0.9rem;
   text-transform: uppercase;
@@ -55,7 +55,7 @@
 }
 
 .work-list__filter.is-active {
-  background: var(--pink);
-  border-color: var(--pink);
+  background: var(--pink-solid);
+  border-color: var(--pink-solid);
   color: #faf8f5;
 }

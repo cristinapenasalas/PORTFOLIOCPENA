@@ -1,5 +1,6 @@
 .project-card {
-  --card-accent: var(--pink);
+  --card-accent: var(--pink-ink);
+  --card-fill: var(--pink);
   display: flex;
   flex-direction: column;
   text-decoration: none;
@@ -10,15 +11,18 @@
 }
 
 .project-card--pink {
-  --card-accent: var(--pink);
+  --card-accent: var(--pink-ink);
+  --card-fill: var(--pink);
 }
 
 .project-card--blue {
-  --card-accent: var(--blue);
+  --card-accent: var(--blue-ink);
+  --card-fill: var(--blue);
 }
 
 .project-card--amber {
-  --card-accent: var(--amber);
+  --card-accent: var(--amber-ink);
+  --card-fill: var(--amber);
 }
 
 .project-card__visual {
@@ -47,7 +51,7 @@
   right: -20%;
   top: -30%;
   border-radius: 50%;
-  background: var(--card-accent);
+  background: var(--card-fill);
   opacity: 0.9;
   transform: translate3d(6%, 6%, 0) scale(0.86);
   transition: transform var(--duration-med) var(--ease-out), opacity var(--duration-med) var(--ease-out);

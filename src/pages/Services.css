@@ -3,7 +3,7 @@
 }
 
 .services-hero__eyebrow {
-  color: var(--pink);
+  color: var(--pink-ink);
   font-weight: 600;
   font-size: 0.9rem;
   text-transform: uppercase;
@@ -31,7 +31,7 @@
 }
 
 .service-row {
-  --accent: var(--pink);
+  --accent: var(--pink-ink);
   display: grid;
   grid-template-columns: minmax(3rem, 6rem) 1fr;
   gap: clamp(1rem, 3vw, 2rem);
@@ -40,15 +40,15 @@
 }
 
 .service-row--pink {
-  --accent: var(--pink);
+  --accent: var(--pink-ink);
 }
 
 .service-row--blue {
-  --accent: var(--blue);
+  --accent: var(--blue-ink);
 }
 
 .service-row--amber {
-  --accent: var(--amber);
+  --accent: var(--amber-ink);
 }
 
 .service-row__index {

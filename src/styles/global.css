@@ -7,13 +7,22 @@
   --amber: #fac775;
   --charcoal: #2c2c2a;
 
+  /* "ink" variants: same hues, darkened to clear ~5:1 contrast as text on --bg.
+     Use --pink/--blue/--amber for backgrounds and decoration; use these for text. */
+  --pink-ink: #c33162;
+  --blue-ink: #206dba;
+  --amber-ink: #965f05;
+
+  /* Fixed (non-theme-switching) filled-button background: pairs with light/white
+     button text at ~5:1 in both themes, unlike --pink-ink which flips lighter in
+     dark mode to stay readable as text on the dark page background instead. */
+  --pink-solid: #c33162;
+
   --bg: #faf8f5;
   --bg-raised: #f2efe9;
   --text: #2c2c2a;
-  --text-muted: rgba(44, 44, 42, 0.64);
+  --text-muted: rgba(44, 44, 42, 0.72);
   --border: rgba(44, 44, 42, 0.14);
-  --accent: var(--pink);
-  --accent-contrast: #faf8f5;
 
   --container: 1320px;
   --gutter: clamp(1.25rem, 4vw, 3rem);
@@ -31,8 +40,10 @@
   --text: #f4f1ea;
   --text-muted: rgba(244, 241, 234, 0.66);
   --border: rgba(244, 241, 234, 0.16);
-  --accent: var(--pink);
-  --accent-contrast: #201f1d;
+
+  --pink-ink: #da698f;
+  --blue-ink: #4492df;
+  --amber-ink: #fac775;
 
   color-scheme: dark;
 }
@@ -109,7 +120,7 @@ p {
 }
 
 .text-link:hover {
-  color: var(--pink);
+  color: var(--pink-ink);
   border-color: var(--pink);
 }
 
@@ -123,6 +134,35 @@ p {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transform: translateY(-120%);
+  background: var(--pink-solid);
+  color: #faf8f5;
+  padding: 0.9rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-radius: 0 0 8px 0;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--pink-ink);
+  outline-offset: 3px;
 }
 
 @media (prefers-reduced-motion: reduce) {

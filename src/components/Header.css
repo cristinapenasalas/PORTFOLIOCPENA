@@ -87,7 +87,7 @@
 }
 
 .site-header__lang:hover {
-  color: var(--pink);
+  color: var(--pink-ink);
 }
 
 .site-header__theme {
@@ -188,7 +188,7 @@
 
 .site-header__mobile-link.is-active,
 .site-header__mobile-link:hover {
-  color: var(--pink);
+  color: var(--pink-ink);
 }
 
 @media (max-width: 760px) {

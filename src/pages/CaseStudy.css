@@ -1,17 +1,21 @@
 .case-study {
-  --accent: var(--pink);
+  --accent: var(--pink-ink);
+  --fill: var(--pink);
 }
 
 .case-study--pink {
-  --accent: var(--pink);
+  --accent: var(--pink-ink);
+  --fill: var(--pink);
 }
 
 .case-study--blue {
-  --accent: var(--blue);
+  --accent: var(--blue-ink);
+  --fill: var(--blue);
 }
 
 .case-study--amber {
-  --accent: var(--amber);
+  --accent: var(--amber-ink);
+  --fill: var(--amber);
 }
 
 .case-study__hero {
@@ -59,7 +63,7 @@
   height: clamp(120px, 20vw, 220px);
   margin-inline: var(--gutter);
   border-radius: 24px;
-  background: linear-gradient(120deg, var(--accent), color-mix(in srgb, var(--accent) 55%, transparent));
+  background: linear-gradient(120deg, var(--fill), color-mix(in srgb, var(--fill) 55%, transparent));
 }
 
 .case-study__block {

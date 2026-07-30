@@ -71,7 +71,9 @@ export default function Work() {
       </section>
 
       <section className="work-list container">
-        <div className="work-list__filters" role="group" aria-label={t.work.filterAll}>
+        <h2 className="visually-hidden">{t.work.listHeading}</h2>
+
+        <div className="work-list__filters" role="group" aria-label={t.work.filterLabel}>
           {filters.map((filter) => (
             <button
               key={filter.value}

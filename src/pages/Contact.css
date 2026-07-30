@@ -3,7 +3,7 @@
 }
 
 .contact-hero__eyebrow {
-  color: var(--pink);
+  color: var(--pink-ink);
   font-weight: 600;
   font-size: 0.9rem;
   text-transform: uppercase;
@@ -70,7 +70,7 @@
 }
 
 .contact-direct__row:hover .contact-direct__value {
-  color: var(--pink);
+  color: var(--pink-ink);
 }
 
 .contact-form {
@@ -112,8 +112,13 @@
 
 .contact-form__field input:focus,
 .contact-form__field textarea:focus {
-  outline: none;
   border-color: var(--pink);
+}
+
+.contact-form__field input:focus-visible,
+.contact-form__field textarea:focus-visible {
+  outline: 2px solid var(--pink-ink);
+  outline-offset: 4px;
 }
 
 .contact-form__submit {
@@ -125,7 +130,7 @@
   padding: 1rem 2.2rem;
   border: none;
   border-radius: 999px;
-  background: var(--pink);
+  background: var(--pink-solid);
   color: #faf8f5;
   font-weight: 600;
   font-size: 1rem;
