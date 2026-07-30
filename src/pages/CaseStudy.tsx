@@ -6,6 +6,7 @@ import ContactCTA from '../components/ContactCTA';
 import PageMeta from '../components/PageMeta';
 import GrowthChart from '../components/GrowthChart';
 import { easeOut } from '../lib/motion';
+import { withBase } from '../lib/assetPath';
 import './CaseStudy.css';
 
 export default function CaseStudy() {
@@ -96,7 +97,7 @@ export default function CaseStudy() {
                 {project.screenshots.map((shot, i) => (
                   <motion.img
                     key={shot.src}
-                    src={shot.src}
+                    src={withBase(shot.src)}
                     alt={shot.alt[lang]}
                     initial={{ opacity: 0, y: 24 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -108,7 +109,7 @@ export default function CaseStudy() {
             ) : (
               <>
                 <motion.img
-                  src={project.screenshots[0].src}
+                  src={withBase(project.screenshots[0].src)}
                   alt={project.screenshots[0].alt[lang]}
                   className="case-study__gallery-hero"
                   initial={{ opacity: 0, y: 20 }}
@@ -121,7 +122,7 @@ export default function CaseStudy() {
                     {project.screenshots.slice(1).map((shot, i) => (
                       <motion.img
                         key={shot.src}
-                        src={shot.src}
+                        src={withBase(shot.src)}
                         alt={shot.alt[lang]}
                         initial={{ opacity: 0, y: 24 }}
                         whileInView={{ opacity: 1, y: 0 }}

@@ -12,7 +12,7 @@ createRoot(document.getElementById('root')!).render(
     <MotionConfig reducedMotion="user">
       <ThemeProvider>
         <LanguageProvider>
-          <BrowserRouter>
+          <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
             <App />
           </BrowserRouter>
         </LanguageProvider>

@@ -3,6 +3,7 @@ import { useLanguage } from '../context/LanguageContext';
 import ContactCTA from '../components/ContactCTA';
 import PageMeta from '../components/PageMeta';
 import { easeOut } from '../lib/motion';
+import { withBase } from '../lib/assetPath';
 import './About.css';
 
 export default function About() {
@@ -42,7 +43,7 @@ export default function About() {
           <span className="about-bio__mark-glyph about-bio__mark-glyph--pink" aria-hidden="true" />
           <span className="about-bio__mark-glyph about-bio__mark-glyph--blue" aria-hidden="true" />
           <img
-            src="/about/cristina-pena.jpeg"
+            src={withBase('/about/cristina-pena.jpeg')}
             alt={t.about.photoAlt}
             className="about-bio__photo"
           />
