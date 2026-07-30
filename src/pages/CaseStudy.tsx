@@ -91,18 +91,9 @@ export default function CaseStudy() {
         {project.screenshots && project.screenshots.length > 0 ? (
           <section className="case-study__gallery container">
             <h2 className="visually-hidden">{t.caseStudy.gallery}</h2>
-            <motion.img
-              src={project.screenshots[0].src}
-              alt={project.screenshots[0].alt[lang]}
-              className="case-study__gallery-hero"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.7, ease: easeOut }}
-            />
-            {project.screenshots.length > 1 && (
-              <div className="case-study__gallery-grid">
-                {project.screenshots.slice(1).map((shot, i) => (
+            {project.compactGallery ? (
+              <div className="case-study__gallery-grid case-study__gallery-grid--compact">
+                {project.screenshots.map((shot, i) => (
                   <motion.img
                     key={shot.src}
                     src={shot.src}
@@ -114,6 +105,33 @@ export default function CaseStudy() {
                   />
                 ))}
               </div>
+            ) : (
+              <>
+                <motion.img
+                  src={project.screenshots[0].src}
+                  alt={project.screenshots[0].alt[lang]}
+                  className="case-study__gallery-hero"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.7, ease: easeOut }}
+                />
+                {project.screenshots.length > 1 && (
+                  <div className="case-study__gallery-grid">
+                    {project.screenshots.slice(1).map((shot, i) => (
+                      <motion.img
+                        key={shot.src}
+                        src={shot.src}
+                        alt={shot.alt[lang]}
+                        initial={{ opacity: 0, y: 24 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{ duration: 0.6, delay: i * 0.08, ease: easeOut }}
+                      />
+                    ))}
+                  </div>
+                )}
+              </>
             )}
           </section>
         ) : (

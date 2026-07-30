@@ -103,6 +103,10 @@ export interface Project {
   results: { es: ProjectResult; en: ProjectResult };
   links?: ProjectLink[];
   screenshots?: ProjectScreenshot[];
+  /** Screenshots are narrow scrolling captures (e.g. a phone screenshot of a
+   * long email) rather than full-width page/app shots — render them at a
+   * controlled size side by side instead of one stretched to full width. */
+  compactGallery?: boolean;
   growth?: ProjectGrowth;
 }
 
@@ -294,6 +298,23 @@ export const projects: Project[] = [
         ],
       },
     },
+    compactGallery: true,
+    screenshots: [
+      {
+        src: '/case-studies/email-landewyck/newsletter-julio-1.png',
+        alt: {
+          es: 'Newsletter de Club Landewyck de julio, mitad superior',
+          en: 'Club Landewyck July newsletter, top half',
+        },
+      },
+      {
+        src: '/case-studies/email-landewyck/newsletter-julio-2.png',
+        alt: {
+          es: 'Newsletter de Club Landewyck de julio, mitad inferior',
+          en: 'Club Landewyck July newsletter, bottom half',
+        },
+      },
+    ],
   },
 ];
 

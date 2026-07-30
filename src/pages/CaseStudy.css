@@ -125,6 +125,18 @@
   border: 1px solid var(--border);
 }
 
+.case-study__gallery-grid--compact {
+  margin-top: 0;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 260px));
+  justify-content: center;
+}
+
+.case-study__gallery-grid--compact img {
+  width: 100%;
+  max-width: 260px;
+  margin-inline: auto;
+}
+
 .case-study__block {
   padding-block: clamp(2.5rem, 6vw, 4rem);
   border-bottom: 1px solid var(--border);
