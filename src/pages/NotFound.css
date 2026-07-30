@@ -1,27 +1,30 @@
-.placeholder {
+.not-found {
   min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.25rem;
   padding-block: clamp(4rem, 14vw, 8rem);
 }
 
-.placeholder__eyebrow {
+.not-found__eyebrow {
   color: var(--pink);
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
 }
 
-.placeholder__title {
-  font-size: clamp(2.5rem, 7vw, 5rem);
+.not-found__heading {
+  font-size: clamp(2.4rem, 6vw, 4rem);
   font-weight: 600;
+  max-width: 16ch;
 }
 
-.placeholder__note {
+.not-found__support {
+  max-width: 44ch;
   color: var(--text-muted);
   font-size: 1.05rem;
+  line-height: 1.55;
 }

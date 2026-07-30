@@ -287,6 +287,34 @@ export const content = {
       support: 'Cuéntame qué necesitas y vemos cómo puedo ayudarte a comunicarlo mejor.',
       button: 'Escríbeme',
     },
+    contact: {
+      eyebrow: 'Contacto',
+      heading: 'Hablemos de tu proyecto.',
+      support:
+        'Cuéntame qué necesitas y te respondo lo antes posible. También puedes escribirme o llamarme directamente.',
+      directHeading: 'Contacto directo',
+      formHeading: 'Envíame un mensaje',
+      form: {
+        name: 'Nombre',
+        namePlaceholder: 'Tu nombre',
+        email: 'Email',
+        emailPlaceholder: 'tu@email.com',
+        message: 'Cuéntame tu proyecto',
+        messagePlaceholder: '¿En qué puedo ayudarte?',
+        submit: 'Enviar mensaje',
+      },
+      labels: {
+        email: 'Email',
+        phone: 'Teléfono',
+        linkedin: 'LinkedIn',
+      },
+    },
+    notFound: {
+      eyebrow: '404',
+      heading: 'Esta página no existe.',
+      support: 'Puede que el enlace esté roto o que la página se haya movido.',
+      cta: 'Volver al inicio',
+    },
     footer: {
       rights: 'Todos los derechos reservados.',
       email: 'cristina.pena3108@gmail.com',
@@ -374,6 +402,34 @@ export const content = {
       heading: "Let's talk about your project",
       support: "Tell me what you need and let's see how I can help you communicate it better.",
       button: 'Get in touch',
+    },
+    contact: {
+      eyebrow: 'Contact',
+      heading: "Let's talk about your project.",
+      support:
+        "Tell me what you need and I'll get back to you as soon as possible. You can also email or call me directly.",
+      directHeading: 'Direct contact',
+      formHeading: 'Send me a message',
+      form: {
+        name: 'Name',
+        namePlaceholder: 'Your name',
+        email: 'Email',
+        emailPlaceholder: 'you@email.com',
+        message: 'Tell me about your project',
+        messagePlaceholder: 'How can I help?',
+        submit: 'Send message',
+      },
+      labels: {
+        email: 'Email',
+        phone: 'Phone',
+        linkedin: 'LinkedIn',
+      },
+    },
+    notFound: {
+      eyebrow: '404',
+      heading: "This page doesn't exist.",
+      support: 'The link might be broken, or the page may have moved.',
+      cta: 'Back to home',
     },
     footer: {
       rights: 'All rights reserved.',

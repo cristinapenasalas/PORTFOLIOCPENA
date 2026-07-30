@@ -5,13 +5,8 @@ import About from './pages/About';
 import Work from './pages/Work';
 import CaseStudy from './pages/CaseStudy';
 import Services from './pages/Services';
-import Placeholder from './pages/Placeholder';
-import { useLanguage } from './context/LanguageContext';
-
-function ContactPage() {
-  const { lang } = useLanguage();
-  return <Placeholder lang={lang} title={{ es: 'Contacto', en: 'Contact' }} />;
-}
+import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -22,7 +17,8 @@ function App() {
         <Route path="/proyectos" element={<Work />} />
         <Route path="/proyectos/:slug" element={<CaseStudy />} />
         <Route path="/servicios" element={<Services />} />
-        <Route path="/contacto" element={<ContactPage />} />
+        <Route path="/contacto" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   );
