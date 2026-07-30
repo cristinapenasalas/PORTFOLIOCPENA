@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import PageMeta from '../components/PageMeta';
@@ -131,6 +132,12 @@ export default function Contact() {
               <button type="submit" className="contact-form__submit">
                 {t.contact.form.submit}
               </button>
+
+              <p className="contact-form__consent">
+                {t.contact.form.consentBefore}
+                <Link to="/privacidad">{t.contact.form.consentLinkLabel}</Link>
+                {t.contact.form.consentAfter}
+              </p>
             </form>
           </motion.div>
         </div>

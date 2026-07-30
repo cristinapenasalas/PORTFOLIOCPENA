@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import './Footer.css';
 
@@ -21,7 +22,7 @@ export default function Footer() {
         </div>
 
         <p className="site-footer__legal">
-          © {year} Cristina Peña. {t.footer.rights}
+          © {year} Cristina Peña. {t.footer.rights} <Link to="/privacidad">{t.footer.privacy}</Link>
         </p>
       </div>
     </footer>

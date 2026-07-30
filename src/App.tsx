@@ -6,6 +6,7 @@ import Work from './pages/Work';
 import CaseStudy from './pages/CaseStudy';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import Privacy from './pages/Privacy';
 import NotFound from './pages/NotFound';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/proyectos/:slug" element={<CaseStudy />} />
         <Route path="/servicios" element={<Services />} />
         <Route path="/contacto" element={<Contact />} />
+        <Route path="/privacidad" element={<Privacy />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

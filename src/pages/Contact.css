@@ -148,6 +148,22 @@
   color: var(--charcoal);
 }
 
+.contact-form__consent {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.contact-form__consent a {
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.contact-form__consent a:hover {
+  color: var(--pink-ink);
+}
+
 @media (max-width: 760px) {
   .contact-grid {
     grid-template-columns: 1fr;

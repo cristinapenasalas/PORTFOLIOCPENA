@@ -409,6 +409,10 @@ export const content = {
         description:
           'Escríbeme a cristina.pena3108@gmail.com, llama al +34 675 666 728 o rellena el formulario para hablar de tu proyecto.',
       },
+      privacy: {
+        title: 'Aviso de privacidad — Cristina Peña',
+        description: 'Información sobre el tratamiento de tus datos cuando me contactas a través de este sitio web.',
+      },
       notFound: {
         title: 'Página no encontrada — Cristina Peña',
         description: 'La página que buscas no existe o se ha movido.',
@@ -522,12 +526,64 @@ export const content = {
         message: 'Cuéntame tu proyecto',
         messagePlaceholder: '¿En qué puedo ayudarte?',
         submit: 'Enviar mensaje',
+        consentBefore: 'Al enviar este formulario, tus datos se usarán solo para responder a tu consulta. Más información en el ',
+        consentLinkLabel: 'aviso de privacidad',
+        consentAfter: '.',
       },
       labels: {
         email: 'Email',
         phone: 'Teléfono',
         linkedin: 'LinkedIn',
       },
+    },
+    privacy: {
+      eyebrow: 'Privacidad',
+      heading: 'Aviso de privacidad.',
+      updated: 'Última actualización: julio de 2026',
+      intro:
+        'Este aviso explica qué ocurre con tus datos cuando me escribes a través del formulario de contacto, por email o por teléfono.',
+      sections: [
+        {
+          heading: 'Responsable',
+          paragraphs: ['Cristina Peña. Contacto: cristina.pena3108@gmail.com.'],
+        },
+        {
+          heading: 'Finalidad',
+          paragraphs: [
+            'Gestionar y responder a las consultas que me envíes a través del formulario de contacto, email o teléfono.',
+          ],
+        },
+        {
+          heading: 'Legitimación',
+          paragraphs: ['El consentimiento que me das al enviarme voluntariamente tus datos.'],
+        },
+        {
+          heading: 'Cómo funciona el formulario de contacto',
+          paragraphs: [
+            'El formulario no envía tus datos a ningún servidor ni base de datos: al pulsar "Enviar mensaje" se abre tu propio cliente de correo con un email prerrellenado para que lo envíes tú directamente a mi dirección. Solo recibo lo que decidas enviarme, igual que con cualquier otro email.',
+          ],
+        },
+        {
+          heading: 'Destinatarios',
+          paragraphs: ['No cedo tus datos a terceros.'],
+        },
+        {
+          heading: 'Conservación',
+          paragraphs: [
+            'Conservo los datos mientras sea necesario para atender tu consulta o mantener la relación profesional, y los elimino cuando dejen de serlo.',
+          ],
+        },
+        {
+          heading: 'Tus derechos',
+          paragraphs: [
+            'Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a cristina.pena3108@gmail.com.',
+          ],
+        },
+        {
+          heading: 'Cookies y analítica',
+          paragraphs: ['Esta web no utiliza cookies de seguimiento ni herramientas de analítica de terceros.'],
+        },
+      ],
     },
     notFound: {
       eyebrow: '404',
@@ -539,6 +595,7 @@ export const content = {
       rights: 'Todos los derechos reservados.',
       email: 'cristina.pena3108@gmail.com',
       linkedin: 'LinkedIn',
+      privacy: 'Aviso de privacidad',
     },
   },
   en: {
@@ -567,6 +624,10 @@ export const content = {
         title: 'Contact — Cristina Peña',
         description:
           'Email cristina.pena3108@gmail.com, call +34 675 666 728, or fill out the form to talk about your project.',
+      },
+      privacy: {
+        title: 'Privacy notice — Cristina Peña',
+        description: 'Information about how your data is handled when you contact me through this website.',
       },
       notFound: {
         title: 'Page not found — Cristina Peña',
@@ -681,12 +742,64 @@ export const content = {
         message: 'Tell me about your project',
         messagePlaceholder: 'How can I help?',
         submit: 'Send message',
+        consentBefore: "By sending this form, your data will only be used to reply to your message. More information in the ",
+        consentLinkLabel: 'privacy notice',
+        consentAfter: '.',
       },
       labels: {
         email: 'Email',
         phone: 'Phone',
         linkedin: 'LinkedIn',
       },
+    },
+    privacy: {
+      eyebrow: 'Privacy',
+      heading: 'Privacy notice.',
+      updated: 'Last updated: July 2026',
+      intro:
+        "This notice explains what happens to your data when you write to me through the contact form, by email, or by phone.",
+      sections: [
+        {
+          heading: 'Data controller',
+          paragraphs: ['Cristina Peña. Contact: cristina.pena3108@gmail.com.'],
+        },
+        {
+          heading: 'Purpose',
+          paragraphs: [
+            'To manage and respond to enquiries you send me through the contact form, email, or phone.',
+          ],
+        },
+        {
+          heading: 'Legal basis',
+          paragraphs: ['The consent you give by voluntarily sending me your data.'],
+        },
+        {
+          heading: 'How the contact form works',
+          paragraphs: [
+            'The form does not send your data to any server or database: clicking "Send message" opens your own email client with a pre-filled email for you to send directly to my address. I only receive what you choose to send me, just like with any other email.',
+          ],
+        },
+        {
+          heading: 'Recipients',
+          paragraphs: ["I don't share your data with third parties."],
+        },
+        {
+          heading: 'Retention',
+          paragraphs: [
+            'I keep your data for as long as needed to handle your enquiry or maintain our professional relationship, and delete it once it is no longer needed.',
+          ],
+        },
+        {
+          heading: 'Your rights',
+          paragraphs: [
+            'You can exercise your rights of access, rectification, erasure, objection, restriction, and portability by writing to cristina.pena3108@gmail.com.',
+          ],
+        },
+        {
+          heading: 'Cookies & analytics',
+          paragraphs: ['This website does not use tracking cookies or third-party analytics tools.'],
+        },
+      ],
     },
     notFound: {
       eyebrow: '404',
@@ -697,6 +810,7 @@ export const content = {
     footer: {
       rights: 'All rights reserved.',
       email: 'cristina.pena3108@gmail.com',
+      privacy: 'Privacy notice',
       linkedin: 'LinkedIn',
     },
   },

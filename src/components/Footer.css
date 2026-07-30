@@ -43,3 +43,13 @@
   font-size: 0.78rem;
   order: 3;
 }
+
+.site-footer__legal a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.site-footer__legal a:hover {
+  color: var(--pink-ink);
+}

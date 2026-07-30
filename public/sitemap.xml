@@ -32,4 +32,8 @@
     <loc>https://cristinapena.example/contacto</loc>
     <lastmod>2026-07-30</lastmod>
   </url>
+  <url>
+    <loc>https://cristinapena.example/privacidad</loc>
+    <lastmod>2026-07-30</lastmod>
+  </url>
 </urlset>
