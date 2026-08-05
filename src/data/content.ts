@@ -1,6 +1,6 @@
 export type Lang = 'es' | 'en';
 
-export type ProjectType = 'social' | 'web' | 'email';
+export type ProjectType = 'social' | 'web' | 'email' | 'branding';
 
 export interface Service {
   type: ProjectType | 'ai';
@@ -327,6 +327,92 @@ export const projects: Project[] = [
           es: 'Newsletter "Mais Adiante com Landewyck", mitad inferior',
           en: '"Mais Adiante com Landewyck" loyalty newsletter, bottom half',
         },
+      },
+    ],
+  },
+  {
+    slug: 'nima-beauty',
+    type: 'branding',
+    color: 'pink',
+    title: { es: 'Nima Beauty', en: 'Nima Beauty' },
+    category: { es: 'Branding', en: 'Branding' },
+    tagline: {
+      es: 'Una marca de cosmética vegana construida desde cero: identidad, e-commerce, redes y email en un solo proyecto.',
+      en: 'A vegan beauty brand built from scratch: identity, e-commerce, social, and email in one project.',
+    },
+    problem: {
+      es: 'Nima Beauty nació como un proyecto personal para practicar el proceso completo de construir una marca desde cero: sin identidad visual, sin presencia digital y sin catálogo de producto.',
+      en: 'Nima Beauty started as a self-directed project to practice the full process of building a brand from zero: no visual identity, no digital presence, and no product catalogue.',
+    },
+    actions: {
+      es: [
+        'Definición de marca: naming, misión, público objetivo, tono de voz y propuesta de valor (clean beauty sin greenwashing).',
+        'Sistema de identidad visual completo: logotipo, isotipo, paleta de color, tipografía y aplicaciones.',
+        'Diseño de e-commerce: home y ficha de producto, con fotografía de producto.',
+        'Kit de contenido para redes: grid de lanzamiento, posts con copy, guía de tono de voz.',
+        'Campaña de email marketing: welcome series de 3 emails (bienvenida, educativo, conversión).',
+      ],
+      en: [
+        'Brand definition: naming, mission, target audience, tone of voice, and value proposition (clean beauty without greenwashing).',
+        'Full visual identity system: logo, icon mark, color palette, typography, and applications.',
+        'E-commerce design: homepage and product page, with product photography.',
+        'Social content kit: launch grid, posts with copy, tone-of-voice guide.',
+        'Email marketing campaign: 3-email welcome series (welcome, educational, conversion).',
+      ],
+    },
+    results: {
+      es: {
+        paragraph:
+          'Marca construida de cero a cien: identidad visual completa, e-commerce funcional, presencia en redes con estrategia de contenido definida, y campaña de email activada — un proceso end-to-end que cubre todas las disciplinas de una marca moderna, desde el naming hasta la conversión.',
+      },
+      en: {
+        paragraph:
+          'A brand built from zero to a hundred: a complete visual identity, a functional e-commerce design, a social presence with a defined content strategy, and an activated email campaign — an end-to-end process covering every discipline of a modern brand, from naming to conversion.',
+      },
+    },
+    screenshots: [
+      {
+        src: '/case-studies/nima-beauty/sistema-de-marca.png',
+        alt: {
+          es: 'Sistema de marca de Nima Beauty: logotipo, isotipo, paleta de color, tipografía y aplicaciones',
+          en: "Nima Beauty's brand system: logo, icon mark, color palette, typography, and applications",
+        },
+      },
+      {
+        src: '/case-studies/nima-beauty/producto-serum.jpg',
+        alt: { es: 'Fotografía de producto: sérum facial', en: 'Product photography: facial serum' },
+      },
+      {
+        src: '/case-studies/nima-beauty/producto-crema.jpg',
+        alt: { es: 'Fotografía de producto: crema hidratante', en: 'Product photography: moisturizing cream' },
+      },
+      {
+        src: '/case-studies/nima-beauty/producto-aceite.jpg',
+        alt: { es: 'Fotografía de producto: aceite de noche', en: 'Product photography: night oil' },
+      },
+      {
+        src: '/case-studies/nima-beauty/social-1-serum.svg',
+        alt: { es: 'Post de Instagram: sérum facial vegano', en: 'Instagram post: vegan facial serum' },
+      },
+      {
+        src: '/case-studies/nima-beauty/social-2-marca-salvia.svg',
+        alt: { es: 'Post de Instagram: marca, fondo salvia', en: 'Instagram post: brand, sage background' },
+      },
+      {
+        src: '/case-studies/nima-beauty/social-3-crema.svg',
+        alt: { es: 'Post de Instagram: crema hidratante', en: 'Instagram post: moisturizing cream' },
+      },
+      {
+        src: '/case-studies/nima-beauty/social-4-carrusel.svg',
+        alt: { es: 'Post de Instagram: portada de carrusel educativo', en: 'Instagram post: educational carousel cover' },
+      },
+      {
+        src: '/case-studies/nima-beauty/social-5-aceite.svg',
+        alt: { es: 'Post de Instagram: aceite de noche', en: 'Instagram post: night oil' },
+      },
+      {
+        src: '/case-studies/nima-beauty/social-6-marca-coral.svg',
+        alt: { es: 'Post de Instagram: marca, fondo coral', en: 'Instagram post: brand, coral background' },
       },
     ],
   },

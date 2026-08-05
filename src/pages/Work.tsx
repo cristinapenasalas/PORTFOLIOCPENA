@@ -11,7 +11,7 @@ import './Work.css';
 
 type FilterValue = ProjectType | 'all';
 
-const projectTypes: ProjectType[] = ['social', 'web', 'email'];
+const projectTypes: ProjectType[] = ['social', 'web', 'email', 'branding'];
 
 function isProjectType(value: string | null): value is ProjectType {
   return projectTypes.includes(value as ProjectType);

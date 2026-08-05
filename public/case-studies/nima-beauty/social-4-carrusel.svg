@@ -1,0 +1,12 @@
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&amp;family=Sora:wght@500;600&amp;display=swap');
+  .h { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 72px; fill: #2C2C2A; }
+  .swipe { font-family: 'Sora', sans-serif; font-weight: 600; font-size: 28px; fill: #8A9A5B; letter-spacing: 2px; }
+</style>
+<rect x="0" y="0" width="1080" height="1080" fill="#F1EDE3"/>
+<rect x="40" y="40" width="1000" height="1000" fill="none" stroke="#8A9A5B" stroke-width="2"/>
+<text x="540" y="470" text-anchor="middle" class="h">3 ingredientes</text>
+<text x="540" y="550" text-anchor="middle" class="h">que sí funcionan</text>
+<text x="540" y="660" text-anchor="middle" class="swipe">→ DESLIZA</text>
+</svg>
