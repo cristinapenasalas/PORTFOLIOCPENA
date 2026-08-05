@@ -341,8 +341,8 @@ export const projects: Project[] = [
       en: 'A vegan beauty brand built from scratch: identity, e-commerce, social, and email in one project.',
     },
     problem: {
-      es: 'Nima Beauty nació como un proyecto personal para practicar el proceso completo de construir una marca desde cero: sin identidad visual, sin presencia digital y sin catálogo de producto.',
-      en: 'Nima Beauty started as a self-directed project to practice the full process of building a brand from zero: no visual identity, no digital presence, and no product catalogue.',
+      es: 'Nima Beauty necesitaba construirse desde cero: sin identidad visual, sin presencia digital y sin catálogo de producto.',
+      en: 'Nima Beauty needed to be built from the ground up: no visual identity, no digital presence, and no product catalogue.',
     },
     actions: {
       es: [
