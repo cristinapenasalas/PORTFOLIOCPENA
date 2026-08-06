@@ -91,6 +91,11 @@ export interface ProjectGrowth {
   points: GrowthPoint[];
 }
 
+export interface GallerySection {
+  title: { es: string; en: string };
+  images: ProjectScreenshot[];
+}
+
 export interface Project {
   slug: string;
   type: ProjectType;
@@ -107,6 +112,10 @@ export interface Project {
    * long email) rather than full-width page/app shots — render them at a
    * controlled size side by side instead of one stretched to full width. */
   compactGallery?: boolean;
+  /** Groups the gallery into labeled sections (e.g. distinct project phases)
+   * instead of a single flat hero+grid. Takes precedence over `screenshots`
+   * when present. */
+  gallerySections?: GallerySection[];
   growth?: ProjectGrowth;
 }
 
@@ -370,20 +379,47 @@ export const projects: Project[] = [
           'A brand built from zero to a hundred: a complete visual identity, a functional e-commerce design, a social presence with a defined content strategy, and an activated email campaign — an end-to-end process covering every discipline of a modern brand, from naming to conversion.',
       },
     },
-    screenshots: [
+    gallerySections: [
       {
-        src: '/case-studies/nima-beauty/sistema-de-marca.png',
-        alt: {
-          es: 'Sistema de marca de Nima Beauty: logotipo, isotipo, paleta de color, tipografía y aplicaciones',
-          en: "Nima Beauty's brand system: logo, icon mark, color palette, typography, and applications",
-        },
+        title: { es: 'Branding', en: 'Branding' },
+        images: [
+          {
+            src: '/case-studies/nima-beauty/sistema-de-marca.png',
+            alt: {
+              es: 'Sistema de marca de Nima Beauty: logotipo, isotipo, paleta de color, tipografía y aplicaciones',
+              en: "Nima Beauty's brand system: logo, icon mark, color palette, typography, and applications",
+            },
+          },
+        ],
       },
       {
-        src: '/case-studies/nima-beauty/redes-grid.jpg',
-        alt: {
-          es: 'Grid de lanzamiento de Instagram de Nima Beauty, con los primeros 6 posts',
-          en: "Nima Beauty's Instagram launch grid, with the first 6 posts",
-        },
+        title: { es: 'Redes sociales', en: 'Social media' },
+        images: [
+          {
+            src: '/case-studies/nima-beauty/redes-grid.jpg',
+            alt: {
+              es: 'Grid de lanzamiento de Instagram de Nima Beauty, con los primeros 6 posts',
+              en: "Nima Beauty's Instagram launch grid, with the first 6 posts",
+            },
+          },
+        ],
+      },
+      {
+        title: { es: 'Email marketing', en: 'Email marketing' },
+        images: [
+          {
+            src: '/case-studies/nima-beauty/email-1-bienvenida.jpg',
+            alt: { es: 'Email de bienvenida de Nima Beauty', en: "Nima Beauty's welcome email" },
+          },
+          {
+            src: '/case-studies/nima-beauty/email-2-educativo.jpg',
+            alt: { es: 'Email educativo de Nima Beauty', en: "Nima Beauty's educational email" },
+          },
+          {
+            src: '/case-studies/nima-beauty/email-3-conversion.jpg',
+            alt: { es: 'Email de conversión de Nima Beauty', en: "Nima Beauty's conversion email" },
+          },
+        ],
       },
     ],
   },

@@ -89,7 +89,37 @@ export default function CaseStudy() {
           )}
         </section>
 
-        {project.screenshots && project.screenshots.length > 0 ? (
+        {project.gallerySections && project.gallerySections.length > 0 ? (
+          <section className="case-study__gallery container">
+            <h2 className="visually-hidden">{t.caseStudy.gallery}</h2>
+            {project.gallerySections.map((sectionGroup) => (
+              <div className="case-study__gallery-section" key={sectionGroup.title[lang]}>
+                <motion.h3
+                  className="case-study__gallery-section-title"
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.6 }}
+                  transition={{ duration: 0.5, ease: easeOut }}
+                >
+                  {sectionGroup.title[lang]}
+                </motion.h3>
+                <div className="case-study__gallery-grid">
+                  {sectionGroup.images.map((shot, i) => (
+                    <motion.img
+                      key={shot.src}
+                      src={withBase(shot.src)}
+                      alt={shot.alt[lang]}
+                      initial={{ opacity: 0, y: 24 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, amount: 0.3 }}
+                      transition={{ duration: 0.6, delay: i * 0.08, ease: easeOut }}
+                    />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </section>
+        ) : project.screenshots && project.screenshots.length > 0 ? (
           <section className="case-study__gallery container">
             <h2 className="visually-hidden">{t.caseStudy.gallery}</h2>
             {project.compactGallery ? (

@@ -131,6 +131,23 @@
   justify-content: center;
 }
 
+.case-study__gallery-section {
+  margin-top: clamp(2.5rem, 6vw, 3.5rem);
+}
+
+.case-study__gallery-section:first-child {
+  margin-top: 0;
+}
+
+.case-study__gallery-section-title {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
+}
+
 .case-study__gallery-grid--compact img {
   width: 100%;
   max-width: 260px;
