@@ -471,6 +471,63 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    slug: 'nordic-coworking',
+    type: 'web',
+    color: 'blue',
+    title: { es: 'Nordic Coworking', en: 'Nordic Coworking' },
+    category: { es: 'Diseño y desarrollo web', en: 'Web design & development' },
+    tagline: {
+      es: 'Landing page para un espacio de coworking — clara, luminosa y pensada para convertir visitas en reservas.',
+      en: 'Landing page for a coworking space — clear, light, and built to turn visits into bookings.',
+    },
+    problem: {
+      es: 'Nordic Coworking necesitaba una landing page que transmitiera su personalidad — profesional, luminosa y escandinava — y que convirtiera visitas en reservas de forma clara, sin fricción.',
+      en: 'Nordic Coworking needed a landing page that captured its personality — professional, light-filled, and Scandinavian — and turned visits into bookings clearly, without friction.',
+    },
+    actions: {
+      es: [
+        'Diseño de página de aterrizaje completa: hero, servicios, planes de precios, testimonios y formulario de reserva.',
+        'Sistema visual escandinavo: paleta azul y gris clara, tipografía Space Grotesk + Inter, mucho espacio en blanco.',
+        'Sección de planes con tres niveles (flexible, mensual, despacho) y plan destacado para guiar la decisión.',
+        'Formulario de reserva de visita integrado, pensado para reducir la fricción de contacto.',
+      ],
+      en: [
+        'Full landing page design: hero, services, pricing plans, testimonials, and a booking form.',
+        'Scandinavian visual system: light blue and grey palette, Space Grotesk + Inter typography, generous white space.',
+        'Three-tier pricing section (flexible, monthly, private office) with a featured plan to guide the decision.',
+        'An integrated visit-booking form, designed to reduce friction to contact.',
+      ],
+    },
+    results: {
+      es: {
+        paragraph:
+          'Una landing page coherente de principio a fin — desde el primer scroll hasta el formulario de reserva — que traduce la personalidad de marca de Nordic Coworking en una experiencia clara y sin fricción.',
+      },
+      en: {
+        paragraph:
+          "A landing page that's coherent from first scroll to booking form — translating Nordic Coworking's brand personality into a clear, frictionless experience.",
+      },
+    },
+    screenshots: [
+      {
+        src: '/case-studies/nordic-coworking/hero.jpg',
+        alt: { es: 'Nordic Coworking — cabecera y sección hero', en: 'Nordic Coworking — header and hero section' },
+      },
+      {
+        src: '/case-studies/nordic-coworking/servicios.jpg',
+        alt: { es: 'Sección de servicios del espacio', en: "The space's services section" },
+      },
+      {
+        src: '/case-studies/nordic-coworking/planes.jpg',
+        alt: { es: 'Sección de planes y precios', en: 'Pricing plans section' },
+      },
+      {
+        src: '/case-studies/nordic-coworking/testimonios.jpg',
+        alt: { es: 'Sección de testimonios', en: 'Testimonials section' },
+      },
+    ],
+  },
 ];
 
 export interface Testimonial {
