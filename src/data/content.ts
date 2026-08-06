@@ -99,7 +99,7 @@ export interface GallerySection {
 export interface Project {
   slug: string;
   type: ProjectType;
-  color: 'pink' | 'blue' | 'amber';
+  color: 'pink' | 'blue' | 'amber' | 'terracotta';
   title: { es: string; en: string };
   category: { es: string; en: string };
   tagline: { es: string; en: string };
@@ -420,6 +420,54 @@ export const projects: Project[] = [
             alt: { es: 'Email de conversión de Nima Beauty', en: "Nima Beauty's conversion email" },
           },
         ],
+      },
+    ],
+  },
+  {
+    slug: 'terra-cala',
+    type: 'branding',
+    color: 'terracotta',
+    title: { es: 'Terra Cala', en: 'Terra Cala' },
+    category: { es: 'Branding', en: 'Branding' },
+    tagline: {
+      es: 'Identidad de marca para un estudio de cerámica artesanal — cálida, orgánica y hecha a mano.',
+      en: 'Brand identity for an artisanal ceramics studio — warm, organic, and handmade.',
+    },
+    problem: {
+      es: 'Terra Cala necesitaba una identidad visual que transmitiera su carácter artesanal: cálida, orgánica y minimalista, alejada de las paletas frías y los códigos digitales genéricos.',
+      en: 'Terra Cala needed a visual identity that captured its handmade character: warm, organic, and minimal — away from cold palettes and generic digital codes.',
+    },
+    actions: {
+      es: [
+        'Sistema de logotipo: lockup principal, isotipo y variante sobre fondo oscuro.',
+        'Paleta de color terrosa: terracota, verde oscuro, crudo y carbón cálido — deliberadamente distinta de mi paleta habitual, para mostrar rango.',
+        'Sistema tipográfico: Archivo para titulares, Inter para cuerpo de texto.',
+        'Aplicaciones de marca: tarjeta de visita y etiqueta de producto.',
+      ],
+      en: [
+        'Logo system: primary lockup, icon mark, and a dark-background variant.',
+        'Earthy color palette: terracotta, dark green, raw cream, and warm charcoal — deliberately different from my usual palette, to show range.',
+        'Typographic system: Archivo for headlines, Inter for body text.',
+        'Brand applications: business card and product label.',
+      ],
+    },
+    results: {
+      es: {
+        paragraph:
+          'Un sistema de marca completo y coherente — logotipo, paleta, tipografía y aplicaciones — que traslada la calidez y la imperfección artesanal de Terra Cala a cada punto de contacto de la marca.',
+      },
+      en: {
+        paragraph:
+          "A complete, coherent brand system — logo, palette, typography, and applications — that carries Terra Cala's warmth and handmade imperfection into every touchpoint.",
+      },
+    },
+    screenshots: [
+      {
+        src: '/case-studies/terra-cala/brand-board.png',
+        alt: {
+          es: 'Sistema de marca de Terra Cala: brief, paleta de color, tipografía, logotipo y aplicaciones',
+          en: "Terra Cala's brand system: brief, color palette, typography, logo, and applications",
+        },
       },
     ],
   },

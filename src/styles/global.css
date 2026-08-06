@@ -18,6 +18,12 @@
      dark mode to stay readable as text on the dark page background instead. */
   --pink-solid: #c33162;
 
+  /* One-off accent for a project that deliberately breaks from the pink/blue/amber
+     system to show range. Same three-tier structure as above. */
+  --terracotta: #b0613f;
+  --terracotta-ink: #7a4229;
+  --terracotta-solid: #7a4229;
+
   --bg: #faf8f5;
   --bg-raised: #f2efe9;
   --text: #2c2c2a;
@@ -44,6 +50,7 @@
   --pink-ink: #da698f;
   --blue-ink: #4492df;
   --amber-ink: #fac775;
+  --terracotta-ink: #c78061;
 
   color-scheme: dark;
 }

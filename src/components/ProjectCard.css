@@ -25,6 +25,11 @@
   --card-fill: var(--amber);
 }
 
+.project-card--terracotta {
+  --card-accent: var(--terracotta-ink);
+  --card-fill: var(--terracotta);
+}
+
 .project-card__visual {
   position: relative;
   height: clamp(140px, 26vw, 260px);
