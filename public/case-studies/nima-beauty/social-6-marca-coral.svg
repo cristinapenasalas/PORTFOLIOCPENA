@@ -1,9 +1,0 @@
-<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&amp;display=swap');
-  .h { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 76px; fill: #F1EDE3; }
-</style>
-<rect x="0" y="0" width="1080" height="1080" fill="#E8825C"/>
-<text x="540" y="500" text-anchor="middle" class="h">100% vegano.</text>
-<text x="540" y="600" text-anchor="middle" class="h">0% postureo.</text>
-</svg>

@@ -391,28 +391,11 @@ export const projects: Project[] = [
         alt: { es: 'Fotografía de producto: aceite de noche', en: 'Product photography: night oil' },
       },
       {
-        src: '/case-studies/nima-beauty/social-1-serum.svg',
-        alt: { es: 'Post de Instagram: sérum facial vegano', en: 'Instagram post: vegan facial serum' },
-      },
-      {
-        src: '/case-studies/nima-beauty/social-2-marca-salvia.svg',
-        alt: { es: 'Post de Instagram: marca, fondo salvia', en: 'Instagram post: brand, sage background' },
-      },
-      {
-        src: '/case-studies/nima-beauty/social-3-crema.svg',
-        alt: { es: 'Post de Instagram: crema hidratante', en: 'Instagram post: moisturizing cream' },
-      },
-      {
-        src: '/case-studies/nima-beauty/social-4-carrusel.svg',
-        alt: { es: 'Post de Instagram: portada de carrusel educativo', en: 'Instagram post: educational carousel cover' },
-      },
-      {
-        src: '/case-studies/nima-beauty/social-5-aceite.svg',
-        alt: { es: 'Post de Instagram: aceite de noche', en: 'Instagram post: night oil' },
-      },
-      {
-        src: '/case-studies/nima-beauty/social-6-marca-coral.svg',
-        alt: { es: 'Post de Instagram: marca, fondo coral', en: 'Instagram post: brand, coral background' },
+        src: '/case-studies/nima-beauty/redes-grid.jpg',
+        alt: {
+          es: 'Grid de lanzamiento de Instagram de Nima Beauty, con los primeros 6 posts',
+          en: "Nima Beauty's Instagram launch grid, with the first 6 posts",
+        },
       },
     ],
   },
