@@ -379,18 +379,6 @@ export const projects: Project[] = [
         },
       },
       {
-        src: '/case-studies/nima-beauty/producto-serum.jpg',
-        alt: { es: 'Fotografía de producto: sérum facial', en: 'Product photography: facial serum' },
-      },
-      {
-        src: '/case-studies/nima-beauty/producto-crema.jpg',
-        alt: { es: 'Fotografía de producto: crema hidratante', en: 'Product photography: moisturizing cream' },
-      },
-      {
-        src: '/case-studies/nima-beauty/producto-aceite.jpg',
-        alt: { es: 'Fotografía de producto: aceite de noche', en: 'Product photography: night oil' },
-      },
-      {
         src: '/case-studies/nima-beauty/redes-grid.jpg',
         alt: {
           es: 'Grid de lanzamiento de Instagram de Nima Beauty, con los primeros 6 posts',
